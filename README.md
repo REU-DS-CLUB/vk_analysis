@@ -15,3 +15,11 @@
 
   Для настройки необходимых пакетов python для скрипта введите в командной строке:
   > pip install -r "requirements.txt"
+
+
+###                                                                    Контакты
+
+
+  **Telegram**: @sophi_nikol, @Vitrisss, @neonoir453\
+  **VK**: vk.com/nik_sophi, https://vk.com/vitykos, vk.com/societyfk\
+  **email**: nikolenko.sofiya@list.ru, vik.kostyrin@gmail.com
