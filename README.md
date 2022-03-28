@@ -1,14 +1,14 @@
-#                ![avatar](https://sun1-13.userapi.com/s/v1/ig2/1r0-byxqFwdntyCx2i6Cxc7zn4yTw9oRDkcLqX789qs6OY9_IBqz2P08wtzp6K35BK9K_cJ-MtI9TyCBczcNCIWF.jpg?size=50x50&amp;quality=96&amp;crop=176,90,541,541&amp;ava=1)                                                    Vk_analysis   
+#Vk_analysis   
 
 | Название | Содержание | 
 |----------------|----------------|
-| vk_analysis.py | фаил с функциями |
+| vk_analysis.py | Файл с функциями |
 | vk_analysis.ipynb | Пример работы в Jupyter NoteBook |
-| requirements.txt | Трубуемые библиотеки |
+| requirements.txt | Требуемые библиотеки |
 
 
 ## Описание
-Проект представляет собой Python фаил с функциями по созданию статистики по сайту с помощью создания ссылкой с UTM меткой и vk API
+Проект представляет собой Python файл с функциями по созданию статистики по сайту с помощью создания ссылкой с UTM меткой и vk API
 
 ##                                                                    Дополнительно
 ###                                                                   Зависимости
@@ -22,4 +22,4 @@
 
   **Telegram**: @sophi_nikol, @Vitrisss, @neonoir453\
   **VK**: vk.com/nik_sophi, https://vk.com/vitykos, vk.com/societyfk\
-  **email**: nikolenko.sofiya@list.ru, vik.kostyrin@gmail.com
+  **Email**: nikolenko.sofiya@list.ru, vik.kostyrin@gmail.com
