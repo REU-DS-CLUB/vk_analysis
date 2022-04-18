@@ -26,5 +26,5 @@
 
 
   **Telegram**: @sophi_nikol, @Vitrisss, @neonoir453\
-  **VK**: vk.com/nik_sophi, https://vk.com/vitykos, vk.com/societyfk\
+  **VK**: vk.com/nik_sophi, vk.com/vitykos, vk.com/societyfk\
   **Email**: nikolenko.sofiya@list.ru, vik.kostyrin@gmail.com
