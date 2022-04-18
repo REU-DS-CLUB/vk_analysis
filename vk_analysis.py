@@ -16,10 +16,6 @@ import time
 """### VK API
 """
 
-# token = 'f7ebf5112379b724e1d11b0a8ab124b74f0d3b5d72af68a9efd90db22e46f69473be213ba81bd8af92d02'
-
-# link = 'https://docs.google.com/forms/d/e/1FAIpQLSfKtUbT3qzkRLLYP0tOfvlRHqiUH3as0Mi3mV06Yi8poCcw1Q/viewform'
-
 vk = vk_api.VkApi(token=token)
 vk._auth_token()
 
