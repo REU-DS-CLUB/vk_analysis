@@ -28,12 +28,32 @@ vk._auth_token()
 
 
 def get_token():
+    
+        """Returns a link where by clicking on it a user can get his/her token. """
+        
     link_token = 'https://oauth.vk.com/authorize?client_id=5440699&display=page&redirect_uri=vk.com/callback&response_type=token&v=5.80&scope=offline'
     return 'Use this link to get your token. It will be after "access_token=" and before "&expires_in=86400":', str(
         link_token)
 
 
 def parse_data_from_table(file_name, sheet_number=None, column=None) -> list:
+    
+        """Returns the list of abbreviations for partners to create a utm tag 
+       
+    Parameters
+    ----------
+    file_name : str
+     a string with a name of a file where a table with information about partners and their abbreviations for utm tags is stored 
+     
+    sheet_number : int
+     integer that represents the sheet of the table where all the info is stored 
+     
+    column : int 
+     integer that represents the column of the table where all the info is stored 
+    
+     
+    """
+ 
     
     if sheet_number is None or column is None:
         raise ValueError("Column or Sheet number where abbreviations are stored should be included in the input")
@@ -46,6 +66,18 @@ def parse_data_from_table(file_name, sheet_number=None, column=None) -> list:
 
 
 def create_unique_link(abbreviations: list, add_link: str) -> list:
+    
+            """Returns the list of unqiue links for partners 
+            
+    Parameters
+    ----------
+    abbreviations : list
+     a list where abbreviations are stored 
+     
+    add_link : str
+     link that will be delivered to partners (for an event/website and etc)
+     
+    """
     
     if abbreviations is str:
         raise ValueError("abbreviation should be put into a list")
@@ -62,8 +94,18 @@ def create_unique_link(abbreviations: list, add_link: str) -> list:
 
 def create_short_links(links: list, private=0) -> list:
     
-    # links should be generated via the function: create_short_links
-    # private=1 if it is for private use only
+                """Returns the list of short links that can be sent to partners and further will be used to gather stats 
+            
+    Parameters
+    ----------
+    links : list
+     a list of unqiue links that should be generated via the function: create_short_links
+     
+    private : 0 / 1 
+     private = 0 by default - the stats is public, everyone with knowing a link can analyse it | private = 1 if it is for private use only
+     
+     """
+
 
     if links is not None:
         short_links = []
@@ -83,9 +125,26 @@ def create_short_links(links: list, private=0) -> list:
 
 
 def view_stats(link, interval='day', intervals_count=90, extended=0):
+        
+                """Returns the list of short links that can be sent to partners and further will be used to gather stats 
+            
+    Parameters
+    ----------
+    link : str
+     a list of unqiue links that should be generated via the function: create_short_links
+     
+    interval : 
     
-    # extended=1 if sex, age, country, city of viewers are needed
-    # intervals_count cannot be set as 0
+    intervals_count : 
+     intervals_count cannot be set as 0
+    
+    
+    extended : 0 / 1
+     extended = 1 if sex, age, country, city of viewers are needed
+     
+     """
+    
+  
     
     key = link[14:]
     dict_stats = vk.method("utils.getLinkStats", {'key': key, 'interval': interval, 'extended': extended,
@@ -98,9 +157,29 @@ def view_stats(link, interval='day', intervals_count=90, extended=0):
     return stat
 
 
-def visualize_stats(key, x_name='', y_name='Views', title_name=""):
+def visualize_stats(link, x_name='', y_name='Views', title_name=""):
+    
+                    """Returns the line chart with the dynamic of views for a partner 
+            
+    Parameters
+    ----------
+    link : str
+     a shorthened link for a partner that a user wants to gather stats about  
+     
+    x_name : 
+     a preferrable title for x axis
+     
+    y_name : 
+     a preferrable title for y axis
+    
+    
+    title_name : str
+     a preferrable title for a partner
+     
+     """
     
     # visualization of stats
+    key = link[14:]
     
     if title_name == "":
         title_name = key
