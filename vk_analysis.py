@@ -126,18 +126,26 @@ def create_short_links(links: list, private=0) -> list:
 
 def view_stats(link, interval='day', intervals_count=90, extended=0):
         
-                """Returns the list of short links that can be sent to partners and further will be used to gather stats 
-            
+                """Returns the list of lists with views per chosen unit in parameter interval in format: 
+                   if interval='days' : ['dd.mm.yyyy', VIEWS] 
+    
     Parameters
     ----------
     link : str
-     a list of unqiue links that should be generated via the function: create_short_links
+     a string with a shorthened link (generated with func: create_short_links) for a partner that a user wants to gather stats about  
      
-    interval : 
-    
-    intervals_count : 
+    interval : str
+     Unit of time for a stats computation. Possible values:
+     - hour 
+     - day 
+     - week 
+     - month
+     - forever — since the day a link has been created
+
+    intervals_count : int
+     Number of periods for stats reviewing in chosen units (from a parameter: interval)
      intervals_count cannot be set as 0
-    
+     Ex. if interval = 'day' and intervals_count = 5 : func will return the stats for 5 days 
     
     extended : 0 / 1
      extended = 1 if sex, age, country, city of viewers are needed
@@ -164,7 +172,7 @@ def visualize_stats(link, x_name='', y_name='Views', title_name=""):
     Parameters
     ----------
     link : str
-     a shorthened link for a partner that a user wants to gather stats about  
+     a shorthened link (generated with func: create_short_links) for a partner that a user wants to gather stats about  
      
     x_name : 
      a preferrable title for x axis
