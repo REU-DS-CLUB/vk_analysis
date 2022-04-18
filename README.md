@@ -18,7 +18,7 @@
 
 ###                                                                   Документация Vk API
   Здесь вы можете ознакомиться с документацией Vk API и методами, которые были использованы в работе
-  > https://dev.vk.com/method/utils.getShortLink
+  > https://dev.vk.com/method/utils.getShortLink\
   > https://dev.vk.com/method/utils.getLinkStats
   
 
