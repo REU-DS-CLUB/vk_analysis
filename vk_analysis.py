@@ -199,4 +199,15 @@ def visualize_stats(link, x_name='', y_name='Views', title_name=""):
     graph.set_ylabel('Views')
     graph.grid()
     plt.show()
+   
+def create_selected_dict(unique_short_link_array, abbreviation_array):
+  arr1 = unique_short_link_array
+  arr2 = abbreviation_array
+  if len(arr1) != len(arr2): 
+    raise ValueError("The arrays have not same size!")
+  else: 
+    dictionary = {}
+    for i in range(len(arr1)):
+      dictionary[arr1[i]] = arr2[i]
+  return dictionary
 
